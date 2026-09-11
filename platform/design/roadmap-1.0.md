@@ -7,6 +7,18 @@
 2. **AI ambition = portal-complete + MCP agent surface** (Aperture ADR-0021's agent-first path). Data stories (Aperture ADR-0022–0025) and in-app chat stay deferred past 1.0.
 3. **Cappella ships ONE reference adapter** proving live ingestion end-to-end; the full adapter catalog is 1.x.
 
+> **Pointer update (2026-09-11, wording only — scope unchanged).** Two references above and in
+> §3 have moved since this roadmap was written: (a) the data-story decisions cited as *Aperture
+> ADR-0022–0025* were migrated to **Reel ADR-0001–0004** on the 2026-06-22 split
+> ([platform ADR-0003](./decisions/ADR-0003-reel-data-story-engine-separate-from-portal.md);
+> [`BU-Neuromics/reel`](https://github.com/BU-Neuromics/reel)); they remain post-1.0 as decided
+> here. (b) The **MCP agent surface** planned as *P3.4 Aperture MCP agent surface* landed in
+> **Mosaic** instead — Mosaic ADR-0009 (Accepted 2026-09-01: capability manifest + QuerySpec
+> validate/execute/aggregate tools) and Mosaic ADR-0010 (outbound delegation to a planning
+> service). The keystone probe (P3.5) has been running since 2026-08 as **Exon**
+> (`BU-Neuromics/mosaic-demo-small`), the prototype Reel will absorb; see Reel's
+> `design/platform-alignment.md` for the crosswalk.
+
 This roadmap supersedes the milestone framing in `FABLE_HANDOFF.md` §6 where they
 conflict, and maps back to it (M2→P2, M4→P2/P3, M5→P3 scoped to one adapter,
 M6→P4). It is written for **handoff to agents**: every epic names its repo, size,
@@ -127,7 +139,7 @@ their dependents.
 
 ## 3. Explicit non-goals for 1.0 (deferred, with pointers)
 
-- **Data stories / instruction paths** (Aperture ADR-0022–0025) and **in-app chat** (ADR-0021 reversal) — post-1.0; the MCP surface + keystone probe is the 1.0 beachhead.
+- **Data stories / instruction paths** (Aperture ADR-0022–0025 → now **Reel ADR-0001–0004**, see the pointer update above) and **in-app chat** (ADR-0021 reversal) — post-1.0; the MCP surface + keystone probe is the 1.0 beachhead.
 - **Embedded schema editor** (aperture#2; hippo X3a/X3b) — post-1.0.
 - **View-description vocabulary chain** (Aperture ADR-0010→0013 keystone probes) — schedule the ADR-0010 survival-curve probe opportunistically; not gating.
 - **linkml-store adoption (Option α)** (hippo#2–#5) — explicitly "blocked on internal v1.0 milestone"; revisit after.
