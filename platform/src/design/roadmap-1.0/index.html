@@ -3962,6 +3962,19 @@
 1. <strong>Bridge minimal ships in 1.0</strong> — 1.0 is a multi-user release; Bridge is the sole enforcing PEP/PDP (<code>sec6_security_model.md</code>, DataHelix#27, hippo#54).
 2. <strong>AI ambition = portal-complete + MCP agent surface</strong> (Aperture ADR-0021's agent-first path). Data stories (Aperture ADR-0022–0025) and in-app chat stay deferred past 1.0.
 3. <strong>Cappella ships ONE reference adapter</strong> proving live ingestion end-to-end; the full adapter catalog is 1.x.</p>
+<blockquote>
+<p><strong>Pointer update (2026-09-11, wording only — scope unchanged).</strong> Two references above and in
+§3 have moved since this roadmap was written: (a) the data-story decisions cited as <em>Aperture
+ADR-0022–0025</em> were migrated to <strong>Reel ADR-0001–0004</strong> on the 2026-06-22 split
+(<a href="../decisions/ADR-0003-reel-data-story-engine-separate-from-portal/">platform ADR-0003</a>;
+<a href="https://github.com/BU-Neuromics/reel"><code>BU-Neuromics/reel</code></a>); they remain post-1.0 as decided
+here. (b) The <strong>MCP agent surface</strong> planned as <em>P3.4 Aperture MCP agent surface</em> landed in
+<strong>Mosaic</strong> instead — Mosaic ADR-0009 (Accepted 2026-09-01: capability manifest + QuerySpec
+validate/execute/aggregate tools) and Mosaic ADR-0010 (outbound delegation to a planning
+service). The keystone probe (P3.5) has been running since 2026-08 as <strong>Exon</strong>
+(<code>BU-Neuromics/mosaic-demo-small</code>), the prototype Reel will absorb; see Reel's
+<code>design/platform-alignment.md</code> for the crosswalk.</p>
+</blockquote>
 <p>This roadmap supersedes the milestone framing in <code>FABLE_HANDOFF.md</code> §6 where they
 conflict, and maps back to it (M2→P2, M4→P2/P3, M5→P3 scoped to one adapter,
 M6→P4). It is written for <strong>handoff to agents</strong>: every epic names its repo, size,
@@ -4331,7 +4344,7 @@ P2 to de-risk). Both have early-warning probes scheduled in the phase before
 their dependents.</p>
 <h2 id="3-explicit-non-goals-for-10-deferred-with-pointers">3. Explicit non-goals for 1.0 (deferred, with pointers)<a class="headerlink" href="#3-explicit-non-goals-for-10-deferred-with-pointers" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Data stories / instruction paths</strong> (Aperture ADR-0022–0025) and <strong>in-app chat</strong> (ADR-0021 reversal) — post-1.0; the MCP surface + keystone probe is the 1.0 beachhead.</li>
+<li><strong>Data stories / instruction paths</strong> (Aperture ADR-0022–0025 → now <strong>Reel ADR-0001–0004</strong>, see the pointer update above) and <strong>in-app chat</strong> (ADR-0021 reversal) — post-1.0; the MCP surface + keystone probe is the 1.0 beachhead.</li>
 <li><strong>Embedded schema editor</strong> (aperture#2; hippo X3a/X3b) — post-1.0.</li>
 <li><strong>View-description vocabulary chain</strong> (Aperture ADR-0010→0013 keystone probes) — schedule the ADR-0010 survival-curve probe opportunistically; not gating.</li>
 <li><strong>linkml-store adoption (Option α)</strong> (hippo#2–#5) — explicitly "blocked on internal v1.0 milestone"; revisit after.</li>
